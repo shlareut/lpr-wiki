@@ -1,4 +1,4 @@
-site_name: Mein Projekt
+site_name: Test Projekt
 nav:
   - Startseite: index.md
 theme:

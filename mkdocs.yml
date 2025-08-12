@@ -1,0 +1,5 @@
+site_name: Mein Projekt
+nav:
+  - Startseite: index.md
+theme:
+  name: material

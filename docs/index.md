@@ -1,4 +1,4 @@
-# Willkommen im "Next-Exam" Wiki
+# Home
 
 Herzlich willkommen im offiziellen Wiki des Projekts **Next-Exam** – Ihrer zentralen Informationsquelle für alles rund um Entwicklung, Betrieb und Nutzung dieser Softwarelösung.
 

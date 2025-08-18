@@ -5,4 +5,4 @@ theme:
   logo: images/bmbwf.png
 plugins:
   - search:
-      lang: en
+      lang: de

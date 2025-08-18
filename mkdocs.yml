@@ -1,7 +1,9 @@
-site_name: Test Projekt
+site_name: Next-Exam Wiki
 theme:
   name: material
   locale: de
   logo: images/bmbwf.png
+plugins:
+  - search
 extra:
   generator: false

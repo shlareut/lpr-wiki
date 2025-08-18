@@ -5,7 +5,7 @@ theme:
   logo: images/icon.png
   favicon: images/icon.png
   palette:
-    primary: grey
+    primary: white
 plugins:
   - search
 extra:

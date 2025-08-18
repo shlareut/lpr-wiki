@@ -3,6 +3,7 @@ theme:
   name: material
   locale: de
   logo: images/icon.png
+  favicon: images/icon.png
 plugins:
   - search
 extra:

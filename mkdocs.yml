@@ -2,7 +2,7 @@ site_name: Test Projekt
 theme:
   name: mkdocs
   locale: de
-  logo: images/logo.png
+  logo: images/bmbwf.png
 plugins:
   - search:
       lang: en

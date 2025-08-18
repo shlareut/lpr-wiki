@@ -67,6 +67,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#bildungsportal-integration" class="md-skip">
+          Zum Inhalt
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -261,6 +266,8 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -303,6 +310,8 @@
   
   
   
+    
+  
   
 </nav>
                   </div>
@@ -318,9 +327,204 @@
 
 
 
-  <h1>Bildungsportal Integration</h1>
-
-<p>hallo hallo</p>
+<h1 id="bildungsportal-integration">Bildungsportal Integration</h1>
+<p><strong>Plugin zur Organisation und Durchführung digitaler Prüfungen über das Bildungsportal (BiP)</strong></p>
+<hr />
+<h1 id="beschreibung">Beschreibung</h1>
+<p>Dieses Plugin dient der Planung, Organisation und Durchführung digitaler Prüfungen innerhalb einer modernen digitalen Prüfungsumgebung. Kernfunktionen sind das Anlegen von Prüfungen über das Bildungsportal, die Konfiguration durch Lehrende sowie die Bereitstellung der relevanten Informationen und Berechtigungen für Prüflinge und Prüfer:innen. Prüfungserstellungen und -konfigurationen erfolgen zentralisiert, die Durchführung und Dokumentation ist in die bestehende IT-Umgebung (insb. Moodle und BiP) eingebettet.</p>
+<hr />
+<h1 id="technische-details">Technische Details</h1>
+<h2 id="prufungsclient">Prüfungsclient</h2>
+<ul>
+<li>Referenz: https://github.com/BiP-org/next-exam</li>
+</ul>
+<h2 id="user-interface-prufung-anlegen">User-Interface – Prüfung anlegen</h2>
+<p><strong>1. Modusauswahl</strong>
+- Bestehender Moodle-Kurs (Quellen: eduvidual, TIBS)
+- Vorlage aus eduthek (Klonen von Kursen oder spezifischen Tests)
+- Zentrale Prüfungen (z.B. sRDP, Diagnosechecks)
+- Digitale Umgebung und Tools:
+    - Sprache
+    - Mathematik (Geogebra)
+    - Microsoft 365 Umgebung
+    - Google Umgebung
+    - Link
+    - RDP (Remote Desktop, durch Schule bereitgestellt)</p>
+<p><strong>2. Zeit/Prüflinge/Sitzplan</strong>
+- Start- und geplante Endzeit bzw. Dauer
+- Raumauswahl
+- Auswahl der prüfungsteilnehmenden Schüler:innen
+- Option: Sitzplan</p>
+<p><strong>3. Prüfer:innen</strong>
+- Zuweisung weiterer Prüfer:innen zur Prüfung</p>
+<p><strong>4. Regeln</strong>
+- Aktivierung/Deaktivierung von:
+    - Rechtschreibkorrektur
+    - Künstlicher Intelligenz
+    - Weiteren Prüfungsregeln (offen für Ergänzungen)</p>
+<p><strong>5. Sicherheit</strong>
+- Authentifizierungsoptionen:
+    - 1FA (Ein-Faktor)
+    - 2FA (ID-Austria)
+    - 3FA (ID-Austria + PIN)
+    - Fotoaufnahme (auf dem Prüfungs-PC als Verifikation der Person vor Ort)</p>
+<h2 id="kalender-integration-kursstruktur">Kalender-Integration / Kursstruktur</h2>
+<ul>
+<li>Anstehende Prüfungen erscheinen im Moodle-Kalender.</li>
+<li>Prüfungen werden als Moodle-Kurse angelegt; im Kurs liegt die Einzelaktivität mod_dpu.</li>
+<li>Spätere Möglichkeit: Anlage von Prüfaktivitäten direkt in bestehenden Klassenkursen (z.B. über local_classregister).</li>
+<li>Prüfungszuordnung via Moodle-Gruppen: Prüflinge werden über Gruppenzugehörigkeit abgebildet und verwaltet.</li>
+</ul>
+<h2 id="application-interface-api">Application-Interface (API)</h2>
+<ul>
+<li>Schnittstelle zur Authentifizierung registrierter Nutzer über Moodle-Login-Token.</li>
+<li>Endpunkte zum:<ul>
+<li>Abruf aller anstehenden Prüfungen &amp; deren Konfiguration für die eingeloggte Person.</li>
+<li>Protokollieren von Prüfungsstart und Prüfungsende (Ende wird vom Prüfungsclient der Lehrperson bestimmt).</li>
+</ul>
+</li>
+<li>Spezifikation:  <ul>
+<li>https://github.com/BiP-org/next-exam/blob/main/teacher/bip-demo-api/api.js</li>
+</ul>
+</li>
+</ul>
+<h2 id="related-tickets">Related Tickets</h2>
+<ul>
+<li>Projektboard &amp; Issues:  <ul>
+<li>https://github.com/orgs/BiP-org/projects/18/views/1?filterQuery=dpu&amp;pane=issue&amp;itemId=98220623&amp;issue=BiP-org%7Cnext-exam%7C77</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h1 id="sonstige-informationen">Sonstige Informationen</h1>
+<h2 id="feature-phasen">Feature-Phasen</h2>
+<p><strong>Phase 1: Lehrer-Version</strong>
+- Lehrpersonen planen Prüfungen und stellen diese ein.</p>
+<p><strong>Phase 2: Schüler-Version</strong>
+- Schüler erhalten eine Übersicht über ihre anstehenden Prüfungen (Beispiel: "Matheklausur am XX.XX.XXXX").</p>
+<h2 id="beispiel-feature-beschreibung">Beispiel-Feature-Beschreibung</h2>
+<ol>
+<li>Lehrkraft meldet sich am Bildungsportal mit ID-Austria-Authentifizierung an.</li>
+<li>Nach Login auf dem BiP-Dashboard mit "Prüfung planen"-Button.</li>
+<li>Nach Button-Klick erscheint die Eingabemaske (Fach, Art, Datum, etc. → genaue Felder noch zu spezifizieren).</li>
+<li>Ziel: Lehrkräfte können Prüfungen im Voraus planen und konfigurieren sowie erforderliche Materialien hochladen. Sämtliche Konfigurationsoptionen im Vorfeld auswählbar (z.B. Exam Type, Zeitlimit, Materialien).</li>
+<li>In der Prüfungssituation selbst ist keine zusätzliche Konfiguration mehr nötig: Prüfung kann aus einer Liste ausgewählt und sofort gestartet werden.</li>
+</ol>
+<p><strong>Schüler:innen melden sich ebenfalls über das Bildungsportal per ID-Austria an.</strong></p>
+<h2 id="screenshots">Screenshots</h2>
+<p>Persönliches Dashboard:
+<img width="1711" height="1241" alt="Screenshot_20250811_155049" src="https://github.com/user-attachments/assets/764117b6-dc19-474f-ac7d-84dde290d858" /></p>
+<p>Schulspezifisches Dashboard:
+<img width="1681" height="739" alt="Screenshot_20250811_155733" src="https://github.com/user-attachments/assets/e7ad57a0-93d7-48b5-b637-fbc059ad002d" /></p>
+<h1 id="offene-fragen">Offene Fragen</h1>
+<h2 id="1-authentifizierung-benutzerverwaltung">1. Authentifizierung &amp; Benutzerverwaltung</h2>
+<ul>
+<li><strong>Fallback/Prozess bei Ausfall der ID-Austria-Authentifizierung</strong><ul>
+<li>Wie soll vorgegangen werden, wenn Schüler:innen keinen Zugriff mehr auf ihre ID-Austria haben? (Backup-Verfahren, Prüfungsverschiebung, vor-Ort-Validierung etc.)</li>
+</ul>
+</li>
+<li><strong>Übernahme von Nutzungsrechten/Rollen</strong><ul>
+<li>Soll das Plugin Nutzungsrechte/Rollen aus dem Bildungsportal übernehmen (z. B. nur Lehrkräfte dürfen Prüfungen planen)?</li>
+</ul>
+</li>
+</ul>
+<h2 id="2-datenschutz-personenbezogene-daten">2. Datenschutz &amp; personenbezogene Daten</h2>
+<ul>
+<li><strong>Umgang mit personenbezogenen Daten aus ID-Austria</strong><ul>
+<li>Werden personenbezogene Daten gespeichert?<ul>
+<li>Falls ja: Wo, wie lange, durch wen abrufbar und wann erfolgt die Löschung?</li>
+<li>Falls nein: Wie läuft die temporäre Nutzung (Session-basiert)?</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="3-prufungsplanung-teilnehmerverwaltung">3. Prüfungs­planung &amp; Teilnehmer­verwaltung</h2>
+<ul>
+<li><strong>Prüfungsberechtigung/Validierung</strong><ul>
+<li>Wie wird technisch/organisatorisch sichergestellt, dass nur für die jeweilige Prüfung vorgesehene Schüler:innen teilnehmen können?</li>
+<li>Können individuelle Prüfungen für einzelne Schüler:innen geplant und verwaltet werden?</li>
+</ul>
+</li>
+<li><strong>Teilnehmerauswahl</strong><ul>
+<li>Wie werden die Prüflinge einer Prüfung im Plugin ausgewählt – manuell aus einer Liste der Schule oder über einen automatischen Import (z. B. aus dem Schülerverzeichnis des BiP)?</li>
+</ul>
+</li>
+<li><strong>Serien-/Sammelprüfungen</strong><ul>
+<li>Sollen nur Einzelprüfungen oder auch Serien-/Sammelprüfungen (z. B. gleiche Prüfung für mehrere Klassen oder parallele Termine in unterschiedlichen Räumen) geplant werden können?</li>
+</ul>
+</li>
+<li><strong>Import aus Moodle-Kurs</strong><ul>
+<li>Wenn ein Moodle-Kurs als Quelle gewählt wird – sollen dann auch Teilnehmerlisten automatisch importiert werden?</li>
+<li>[Beantwortet: Ja, Teilnehmerlisten werden übernommen.]</li>
+<li>Sollen Gruppen aus Moodle mit importiert werden, oder werden alle Teilnehmenden in einer Liste übernommen?</li>
+<li>[Beantwortet: Nein, alle Teilnehmenden werden in einer Liste übernommen.]</li>
+</ul>
+</li>
+</ul>
+<h2 id="4-prufungsvorlagen-und-verwaltung">4. Prüfungs­vorlagen und Verwaltung</h2>
+<ul>
+<li><strong>Prüfungsvorlagen</strong><ul>
+<li>Sollen auch Prüfungsvorlagen im Plugin gespeichert werden können, um wiederkehrende Einstellungen schnell zu übernehmen?</li>
+</ul>
+</li>
+<li><strong>Prüfungsübersicht</strong><ul>
+<li>Soll das Plugin eine Übersicht aller geplanten Prüfungen einer Lehrkraft bereitstellen (inkl. Filter-/Suchfunktion)?</li>
+</ul>
+</li>
+<li><strong>Prüfungsbearbeitung</strong><ul>
+<li>Sollen geplante Prüfungen bearbeitet oder storniert werden können, und falls ja, bis zu welchem Zeitpunkt vor Prüfungsbeginn?</li>
+</ul>
+</li>
+<li><strong>Prüfungshistorie</strong><ul>
+<li>Soll es für Lehrkräfte eine Prüfungshistorie geben, um vergangene Prüfungen einzusehen und ggf. zu kopieren?</li>
+</ul>
+</li>
+</ul>
+<h2 id="5-prufungsteam-zusatzberechtigungen">5. Prüfungsteam &amp; Zusatzberechtigungen</h2>
+<ul>
+<li><strong>Zusätzliche Prüfer:innen</strong><ul>
+<li>Wie sollen zusätzliche Prüfer:innen ausgewählt werden – aus einer vordefinierten Lehrerliste der Schule oder per freier Suche im gesamten BiP-Lehrendenverzeichnis?</li>
+</ul>
+</li>
+</ul>
+<h2 id="6-feedback-benachrichtigung-kommunikation">6. Feedback, Benachrichtigung &amp; Kommunikation</h2>
+<ul>
+<li><strong>Feedback an Schüler:innen über BiP</strong><ul>
+<li>Sollen Schüler:innen im BiP Feedback, Benachrichtigungen oder Noten zur Prüfung erhalten?</li>
+</ul>
+</li>
+<li><strong>Benachrichtigungsfunktion</strong><ul>
+<li>Soll es eine Benachrichtigungsfunktion geben (z. B. E-Mail oder BiP-Notification) für Lehrkräfte und Prüflinge bei neuen oder geänderten Prüfungen?</li>
+</ul>
+</li>
+</ul>
+<h2 id="7-technische-schnittstellen-apis">7. Technische Schnittstellen &amp; APIs</h2>
+<ul>
+<li><strong>API-Nutzung durch Drittsysteme</strong><ul>
+<li>Soll die API später auch von Drittsystemen (z. B. Schulverwaltung) aufgerufen werden können, um Prüfungen automatisiert anzulegen?</li>
+</ul>
+</li>
+</ul>
+<h2 id="8-authentifizierungsoptionen-je-prufung">8. Authentifizierungsoptionen je Prüfung</h2>
+<ul>
+<li><strong>Einstellung pro Prüfung</strong><ul>
+<li>Sollen Authentifizierungsoptionen (1FA, 2FA, 3FA, Fotoaufnahme) fix pro Prüfung gesetzt werden oder können mehrere Optionen erlaubt sein?</li>
+<li>[Teils beantwortet: ID-Austria ist verpflichtend – andere Methoden sind aktuell irrelevant.]</li>
+</ul>
+</li>
+</ul>
+<h2 id="9-internationalisierung-nutzerfreundlichkeit">9. Internationalisierung &amp; Nutzerfreundlichkeit</h2>
+<ul>
+<li><strong>Mehrsprachigkeit</strong><ul>
+<li>Gibt es Anforderungen an Mehrsprachigkeit der Oberfläche (Deutsch/Englisch) oder nur in Deutsch?</li>
+</ul>
+</li>
+</ul>
+<hr />
+<ul>
+<li>Bildungsportal-Plugin -&gt; Pilot-Schulen sollen jeweils 2 Lehrer (inkl. Kontaktdaten) im Bildungsportal vermerken können, die zuständig für Next-Exam sind und die Schulung absolviert haben.</li>
+</ul>
 
 
 

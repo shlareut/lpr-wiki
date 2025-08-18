@@ -1,3 +1,8 @@
 site_name: Test Projekt
 theme:
   name: material
+  locale: de
+  logo: images/logo.png
+plugins:
+  - search:
+      lang: en

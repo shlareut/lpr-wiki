@@ -2,7 +2,7 @@ site_name: Next-Exam Wiki
 theme:
   name: material
   locale: de
-  logo: images/bmbwf.png
+  logo: images/icon.png
 plugins:
   - search
 extra:

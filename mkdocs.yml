@@ -4,5 +4,6 @@ theme:
   locale: de
   logo: images/bmbwf.png
 plugins:
+  - tags
   - search:
       lang: de

@@ -1,6 +1,6 @@
 site_name: Test Projekt
 theme:
-  name: material
+  name: mkdocs
   locale: de
   logo: images/logo.png
 plugins:

@@ -1,1 +1,1 @@
-{"config":{"lang":["en"],"separator":"[\\s\\-]+","pipeline":["stopWordFilter"]},"docs":[{"location":"","title":"Home","text":"<p>Willkommen im Wiki</p>"},{"location":"test2/hallo/","title":"Hallo","text":"<p>hallo hallo</p>"}]}
+{"config":{"lang":["de"],"separator":"[\\s\\-]+","pipeline":["stopWordFilter"]},"docs":[{"location":"","title":"Home","text":"<p>Willkommen im Wiki</p>"},{"location":"test2/hallo/","title":"Hallo","text":"<p>hallo hallo</p>"}]}

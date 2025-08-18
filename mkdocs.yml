@@ -7,3 +7,5 @@ plugins:
   - search
 extra:
   generator: false
+palette:
+    primary: grey

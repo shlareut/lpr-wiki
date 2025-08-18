@@ -1,12 +1,12 @@
 site_name: Next-Exam Wiki
 theme:
   name: material
-  locale: de
+  language: de
   logo: images/icon.png
   favicon: images/icon.png
+  palette:
+    primary: indigo
 plugins:
   - search
 extra:
   generator: false
-palette:
-    primary: grey

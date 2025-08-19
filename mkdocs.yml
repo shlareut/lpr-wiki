@@ -4,9 +4,17 @@ theme:
   language: de
   logo: images/next-exam-logo.png
   favicon: images/next-exam-logo.png
+  icon:
+    edit: material/pencil 
+    view: material/eye
   palette:
     primary: white
+  features:
+    - content.action.edit
 plugins:
   - search
 extra:
   generator: false
+repo_url: https://github.com/shlareut/lpr-wiki
+edit_uri: edit/main/docs/
+

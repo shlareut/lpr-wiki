@@ -2,8 +2,8 @@ site_name: Next-Exam Wiki
 theme:
   name: material
   language: de
-  logo: images/icon.png
-  favicon: images/icon.png
+  logo: images/next-exam-logo.png
+  favicon: images/next-exam-logo.png
   palette:
     primary: white
 plugins:

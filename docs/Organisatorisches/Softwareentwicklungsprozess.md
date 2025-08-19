@@ -103,7 +103,7 @@ Der folgende Abschnitt beschreibt die wichtigsten Phasen dieses Entwicklungsproz
 
 **Ergebnis:** Ready-for-Dev User Stories im Backlog (z. B. als Tickets im Jira-Backlog).
 
-# Phase 4: Planung
+## Phase 4: Planung
 
 <img width="350" alt="softwareentwicklungsprozess-phase-4" src="https://github.com/user-attachments/assets/193d79a9-96fc-42a8-bf7f-904b38a0482f" />
 

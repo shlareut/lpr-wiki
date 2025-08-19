@@ -4,12 +4,12 @@ Die Integration mit dem Bildungsportal (BiP; https://www.bildung.gv.at/) soll di
 
 Grundsätzlich soll das Next-Exam Plugin alle Einstellungsmöglichkeiten im Rahmen der Prüfungsplanung bieten, die derzeit auch der Teacher-Client bietet.
 
-# Scope
+## Scope
 
 - Phase 1 richtet sich ausschließlich an Lehrkräfte.
 - Phase 2 erweitert die Funktionen um die Schüler:innen-Perspektive: Nach der Anmeldung mit ID Austria im BiP erhalten Schüler:innen eine übersichtliche Auflistung aller bevorstehenden Prüfungen sowie wichtiger Details wie Prüfungsfach und Prüfungstermin (z. B. Mathematik-Prüfung am 18.08.2025).
  
-# Grober Workflow (Next-Exam mit Bildungsportal)
+## Grober Workflow (Next-Exam mit Bildungsportal)
 
 1. **Anmeldung:**  
    Die Lehrkraft authentifiziert sich im Bildungsportal (BiP) via ID Austria.
@@ -35,9 +35,9 @@ Grundsätzlich soll das Next-Exam Plugin alle Einstellungsmöglichkeiten im Rahm
    > Nach dem Start meldet Next-Exam den Status (z. B. „Prüfung läuft“) sowie relevante Daten (Lehrer-IP, Lehrer-ID, Exam-Status, Exam-ID, Prüfungs-Pincode) zurück an das BiP.  
    > Ziel: Schüler:innen sehen in ihrem BiP-Portal die gestartete Prüfung und können sich unkompliziert per Prüfungs-Pincode einwählen und teilnehmen.
 
-# Anforderungen (Grob)
+## Anforderungen (Grob)
 
-## 1. Modusauswahl
+**1. Modusauswahl**
 
 - Auswahl bestehender Moodle-Kurse (z. B. eduvidual, TIBS) als Prüfungsgrundlage
 - Nutzung von Vorlagen aus eduthek (Klonen von Kursen oder spezifischen Tests)
@@ -50,49 +50,49 @@ Grundsätzlich soll das Next-Exam Plugin alle Einstellungsmöglichkeiten im Rahm
     - Ergänzung von Links zu externen Ressourcen
     - Nutzung schulbereitgestellter Remote-Desktop (RDP)-Lösungen
 
-## 2. Zeit, Teilnehmer:innen, Sitzplan
+**2. Zeit, Teilnehmer:innen, Sitzplan**
 
 - Festlegung der Start- und Endzeit bzw. Gesamtdauer der Prüfung
 - Auswahl des Prüfungsraums aus einer Liste
 - Auswahl und Zuweisung der teilnehmenden Schüler:innen zur Prüfung
 - Verwaltung eines Sitzplans (späteres Feature; ab Version 1 nicht erforderlich)
 
-## 3. Prüfer:innen
+**3. Prüfer:innen**
 
 - Zuweisung weiterer Prüfer:innen und Vergabe entsprechender Berechtigungen
 
-## 4. Prüfungsregeln
+**4. Prüfungsregeln**
 
 - Aktivierung/Deaktivierung der Rechtschreibkorrektur
 - Aktivierung/Deaktivierung von KI-Funktionen während der Prüfung
 - Konfiguration individueller Prüfungsregeln
 
-## 5. Sicherheit
+**5. Sicherheit**
 
 - Auswahl der Authentifizierungsmethode pro Prüfung: 1FA, 2FA (ID Austria), 3FA (inkl. PIN)
 - Optionale Fotoaufnahme zur Identitätsprüfung am Prüfungs-PC
 
-## 6. Kalenderintegration & Kursstruktur
+**6. Kalenderintegration & Kursstruktur**
 
 - Automatische Anzeige anstehender Prüfungen im Moodle-Kalender der Teilnehmenden
 - Automatische Erstellung von Prüfungen als Moodle-Kurse mit Einzelaktivität (mod_dpu)
 - Option, Prüfungsaktivitäten künftig direkt in bestehenden Klassenkursen (via local_classregister) anzulegen
 - Verwaltung der Schulzugehörigkeit der Prüflinge via Moodle-Gruppen
 
-## 7. Application-Interface (API)
+**7. Application-Interface (API)**
 
 - Authentifizierung registrierter Nutzer:innen via Moodle-Login-Token
 - Endpunkte zum Abruf und zur Konfiguration relevanter Prüfungsinformationen für eingeloggte Nutzer:innen
 - Endpunkte zur Protokollierung von Prüfungsstart und Prüfungsende (Ende wird durch Lehrkraft im Prüfungsclient definiert)
 - → [API-Dokumentation](https://github.com/BiP-org/next-exam/blob/main/teacher/bip-demo-api/api.js)
 
-## 8. Bildungsportal
+**8. Bildungsportal**
 
 - Pilot-Schulen müssen im BiP zwei zuständige, geschulte Lehrkräfte inkl. Kontaktdaten hinterlegen
 
 ---
 
-# Weitere Informationen
+## Weitere Informationen
 
 - **Bestehende Tickets/Grobanforderungen:**  
   [Grobanforderungen (veraltet, nicht für API-Spezifikation verwenden)](https://github.com/BiP-org/next-exam/blob/ProjectManagement/epics/BiPExamConfiguration.md)
@@ -101,7 +101,7 @@ Grundsätzlich soll das Next-Exam Plugin alle Einstellungsmöglichkeiten im Rahm
 
 ---
 
-# Offene Fragen & Antworten
+## Offene Fragen & Antworten
 
 - **Fallback ID Austria:**  
   Was tun bei fehlendem Zugang zu ID Austria bei Lehrer:in/Schüler:in (z. B. Backup-Verfahren, Prüfungsverschiebung)?

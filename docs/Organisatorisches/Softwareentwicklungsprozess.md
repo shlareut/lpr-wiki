@@ -1,5 +1,5 @@
 # Softwareentwicklungsprozess
-# Inhaltsverzeichnis
+
 - [Einführung](#einführung)
 - [Phase 1: Anforderungserhebung](#phase-1-anforderungserhebung)
 - [Phase 2: Priorisierung](#phase-2-priorisierung)

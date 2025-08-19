@@ -1,4 +1,4 @@
-# How-To: Verwendung von Issue-Templates
+# How-To: Issue Templates
 
 Zur strukturierten Zusammenarbeit bei Next-Exam stehen maßgeschneiderte Issue Templates bereit. Mit diesen Vorlagen kannst du Feature-Wünsche, Anpassungen, Fehlerberichte, Action Points, Epics sowie technische Vorhaben klar und übersichtlich dokumentieren.
 

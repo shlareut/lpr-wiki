@@ -38,7 +38,7 @@ Leere Issues ohne Template sind nicht erlaubt (`blank_issues_enabled: false`). B
 
 ## Templates im Detail & Beispiele
 
-### 🟢 1. User Story
+### User Story
 *Zur Beschreibung von Nutzerbedürfnissen und neuen Funktionen aus Anwendersicht.*
 
 **Wichtige Felder:**
@@ -58,7 +58,7 @@ Akzeptanzkriterien:
 
 ---
 
-### ⚙️ 2. Technisches Feature
+### Technisches Feature
 
 *Für technische Aufgaben, Verbesserungen oder Architekturarbeiten.*
 
@@ -87,7 +87,7 @@ Notizen, Risiken & Annahmen:
 
 ---
 
-### 📝 3. Anpassung
+### Anpassung
 *Zur Aufnahme von UI-/Text-Änderungen und kleinen Ablaufoptimierungen.*
 
 **Wichtige Felder:**
@@ -107,7 +107,7 @@ Lehrermaske, Hilfetexte, automatisierte UI-Tests.
 
 ---
 
-### 🐞 4. Bug
+### Bug
 *Um Fehler, unerwartetes Verhalten und Probleme nachvollziehbar zu melden.*
 
 **Wichtige Felder:**
@@ -129,7 +129,7 @@ Liste aller Teilnehmenden wird korrekt angezeigt.
 
 ---
 
-### ❓ 5. Action Point
+### Action Point
 *Um offene Punkte, Ideen und Entscheidungsbedarfe festzuhalten.*
 
 **Wichtige Felder:**
@@ -149,7 +149,7 @@ Spezi-Dokument, verwandtes Issue #42
 
 ---
 
-### ✳️ 6. Epic
+### Epic
 *Nutzt du für große Themengebiete, die mehrere Themen/Issues bündeln.*
 
 **Wichtige Felder:**

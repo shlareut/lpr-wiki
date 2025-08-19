@@ -7,7 +7,7 @@ Leere Issues ohne Template sind nicht erlaubt (`blank_issues_enabled: false`). B
 
 ---
 
-## Übersicht & Anwendungsfälle
+## 1. Übersicht & Anwendungsfälle
 
 | Template            | Einsatzgebiet                                         | Typische Beispiele                         |
 |---------------------|------------------------------------------------------|--------------------------------------------|
@@ -20,7 +20,7 @@ Leere Issues ohne Template sind nicht erlaubt (`blank_issues_enabled: false`). B
 
 ---
 
-## So erstellst du ein neues Issue
+## 2. So erstellst du ein neues Issue
 
 1. **Navigiere zur „Issues“-Sektion**  
    Klicke im Repository auf „Issues“ > „New Issue“.
@@ -36,9 +36,9 @@ Leere Issues ohne Template sind nicht erlaubt (`blank_issues_enabled: false`). B
 
 ---
 
-## Templates im Detail & Beispiele
+## 3. Templates im Detail & Beispiele
 
-### User Story
+### 3.1. User Story
 *Zur Beschreibung von Nutzerbedürfnissen und neuen Funktionen aus Anwendersicht.*
 
 **Wichtige Felder:**
@@ -58,7 +58,7 @@ Akzeptanzkriterien:
 
 ---
 
-### Technisches Feature
+### 3.2. Technisches Feature
 
 *Für technische Aufgaben, Verbesserungen oder Architekturarbeiten.*
 
@@ -87,7 +87,7 @@ Notizen, Risiken & Annahmen:
 
 ---
 
-### Anpassung
+### 3.3. Anpassung
 *Zur Aufnahme von UI-/Text-Änderungen und kleinen Ablaufoptimierungen.*
 
 **Wichtige Felder:**
@@ -107,7 +107,7 @@ Lehrermaske, Hilfetexte, automatisierte UI-Tests.
 
 ---
 
-### Bug
+### 3.4. Bug
 *Um Fehler, unerwartetes Verhalten und Probleme nachvollziehbar zu melden.*
 
 **Wichtige Felder:**
@@ -129,7 +129,7 @@ Liste aller Teilnehmenden wird korrekt angezeigt.
 
 ---
 
-### Action Point
+### 3.5. Action Point
 *Um offene Punkte, Ideen und Entscheidungsbedarfe festzuhalten.*
 
 **Wichtige Felder:**
@@ -149,7 +149,7 @@ Spezi-Dokument, verwandtes Issue #42
 
 ---
 
-### Epic
+### 3.6. Epic
 *Nutzt du für große Themengebiete, die mehrere Themen/Issues bündeln.*
 
 **Wichtige Felder:**
@@ -162,7 +162,7 @@ Epic zur Digitalisierung der kompletten Prüfungsorganisation und -abwicklung be
 
 ---
 
-## Gute Practices für alle Issues
+## 4. Gute Practices für alle Issues
 
 - So präzise & konkret wie möglich ausfüllen  
 - Relevante Anhänge, Bilder oder Design-Links hinzufügen  
@@ -172,7 +172,7 @@ Epic zur Digitalisierung der kompletten Prüfungsorganisation und -abwicklung be
 
 ---
 
-## Hinweis zur Konfiguration
+## 5. Hinweis zur Konfiguration
 
 Aktuell ist das Erstellen leerer Issues ohne Template deaktiviert (`blank_issues_enabled: false`).  
 Bitte wähle immer einen der vorhandenen Typen für dein Anliegen aus!

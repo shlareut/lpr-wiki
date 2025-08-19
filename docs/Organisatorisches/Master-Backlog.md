@@ -1,3 +1,5 @@
+# Master-Backlog
+
 || Thema|Bereich|Priorität|Beschreibung|
 |:-|:-|:-|:-|:-|
 | • | Gnome Screenshots   | Technisch | ?         | Das gnome-team hat mit dem Switch zum Wayland Windowmanager das automatische Erstellen von Screenshots mehr oder weniger unmöglich gemacht.<br><br>Zumindest für Next Exam, da jeder Screenshot mit einer "Flash Animation" und einem Sound begleitet wird und danach ein Fenster in den Vordergrund rückt.<br><br>Daher wird auf Wayland/GNOME als Fallback Page Capture genutzt und nur das Electron-Fenster selbst übertragen.<br><br>Das hier wollte ich beizeiten noch ausprobieren:<br>https://stackoverflow.com/questions/68341253/how-can-i-take-a-screenshot-on-wayland |

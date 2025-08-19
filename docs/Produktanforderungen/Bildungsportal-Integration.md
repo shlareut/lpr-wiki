@@ -4,12 +4,12 @@ Die Integration mit dem Bildungsportal (BiP; https://www.bildung.gv.at/) soll di
 
 Grundsätzlich soll das Next-Exam Plugin alle Einstellungsmöglichkeiten im Rahmen der Prüfungsplanung bieten, die derzeit auch der Teacher-Client bietet.
 
-## Scope
+## 1. Scope
 
 - Phase 1 richtet sich ausschließlich an Lehrkräfte.
 - Phase 2 erweitert die Funktionen um die Schüler:innen-Perspektive: Nach der Anmeldung mit ID Austria im BiP erhalten Schüler:innen eine übersichtliche Auflistung aller bevorstehenden Prüfungen sowie wichtiger Details wie Prüfungsfach und Prüfungstermin (z. B. Mathematik-Prüfung am 18.08.2025).
  
-## Grober Workflow (Next-Exam mit Bildungsportal)
+## 2. Grober Workflow
 
 1. **Anmeldung:**  
    Die Lehrkraft authentifiziert sich im Bildungsportal (BiP) via ID Austria.
@@ -35,7 +35,7 @@ Grundsätzlich soll das Next-Exam Plugin alle Einstellungsmöglichkeiten im Rahm
    > Nach dem Start meldet Next-Exam den Status (z. B. „Prüfung läuft“) sowie relevante Daten (Lehrer-IP, Lehrer-ID, Exam-Status, Exam-ID, Prüfungs-Pincode) zurück an das BiP.  
    > Ziel: Schüler:innen sehen in ihrem BiP-Portal die gestartete Prüfung und können sich unkompliziert per Prüfungs-Pincode einwählen und teilnehmen.
 
-## Anforderungen (Grob)
+## 3. Anforderungen (Grob)
 
 **1. Modusauswahl**
 
@@ -92,7 +92,7 @@ Grundsätzlich soll das Next-Exam Plugin alle Einstellungsmöglichkeiten im Rahm
 
 ---
 
-## Weitere Informationen
+## 4. Weitere Informationen
 
 - **Bestehende Tickets/Grobanforderungen:**  
   [Grobanforderungen (veraltet, nicht für API-Spezifikation verwenden)](https://github.com/BiP-org/next-exam/blob/ProjectManagement/epics/BiPExamConfiguration.md)
@@ -101,7 +101,7 @@ Grundsätzlich soll das Next-Exam Plugin alle Einstellungsmöglichkeiten im Rahm
 
 ---
 
-## Offene Fragen & Antworten
+## 5. Offene Fragen & Antworten
 
 - **Fallback ID Austria:**  
   Was tun bei fehlendem Zugang zu ID Austria bei Lehrer:in/Schüler:in (z. B. Backup-Verfahren, Prüfungsverschiebung)?
@@ -196,7 +196,7 @@ Grundsätzlich soll das Next-Exam Plugin alle Einstellungsmöglichkeiten im Rahm
 - **Welche APIs stellt das Bildungsportal zur Verfügung (z. B. für Auswahl der Schulklasse)?**  
   → Schnittstellendokumentation von Christoph/Robert einholen!
 
-## Screenshots
+## 6. Screenshots
 
 Persönliches Dashboard:
 <img width="1711" height="1241" alt="Screenshot_20250811_155049" src="https://github.com/user-attachments/assets/764117b6-dc19-474f-ac7d-84dde290d858" />
